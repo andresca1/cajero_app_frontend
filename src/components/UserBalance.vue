@@ -18,7 +18,7 @@ export default {
     created: function(){
         this.username = this.$route.params.username
         let self = this
-        axios.get("http://127.0.0.1:8000/user/balance/" + this.username) //Llamado al backend 
+        axios.get("https://andrescaapp.herokuapp.com/user/balance/" + this.username) //Llamado al backend 
             .then((result) => {
                 self.balance = result.data.balance
         })
